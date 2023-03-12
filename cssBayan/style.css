@@ -1,8 +1,37 @@
 @import "normalize.css";
 
+:root {
+  --sm: 320px;
+  --md: 820px;
+  --lg: 1420px;
+  --screen: var(--lg);
+}
 *,*:before,*:after {
   box-sizing: border-box;
 }
 html,body {
   height: 100vh;
+  background: rgb(245,245,235);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } 
+
+/* --------------------------------- */
+@media screen and (max-width: 1420px) {
+  :root {
+    --screen: var(--md);
+  }
+  html,body {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 820px) {
+  :root {
+    --screen: var(--sm);
+  }
+  html,body {
+    font-size: 80%;
+  }
+}
+.section {
+  padding: 0 calc(50% - var(--screen)/2);
+}
