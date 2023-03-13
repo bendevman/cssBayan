@@ -18,10 +18,10 @@ html,body {
 .h3 {
   margin: 0;
   font-size: 3rem;
-  padding: 10px 0;
+  padding: 0.5rem 0;
 }
 .accordion {
-  padding: 10px;
+  padding: 0.5rem;
 }
 .accordion__list {
   list-style: none;
@@ -36,7 +36,7 @@ html,body {
 .label {
   display: block;
   overflow: hidden;
-  border-top: 1px solid rgb(210,217,226);
+  border-top: 0.1rem solid rgb(210,217,226);
 }
 
 .drop {
@@ -48,7 +48,7 @@ html,body {
 
 .drop__title {
   font-size: 1.5rem;
-  padding: 10px 0;
+  padding: 0.5rem 0;
   font-weight: bold;
   display: flex;
 }
@@ -61,7 +61,7 @@ html,body {
 .drop__pic {
   display: flex;
   justify-content: center;
-  padding-bottom: 15px;
+  padding-bottom: 0.5rem;
 }
 .drop__img {
   transition: width 0.7s;
