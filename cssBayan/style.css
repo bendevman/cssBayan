@@ -1,0 +1,129 @@
+@import "normalize.css";
+
+:root {
+  --sm: 320px;
+  --md: 820px;
+  --lg: 1420px;
+  --big: 1680px;
+  --screen: var(--big);
+}
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+html,body {
+  height: 100vh;
+  background: rgb(245,245,235);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+.h3 {
+  margin: 0;
+  font-size: 3rem;
+  padding: 0.5rem 0;
+}
+.accordion {
+  padding: 0.5rem;
+}
+.accordion__list {
+  list-style: none;
+  padding: 0;
+	margin: 0;
+}
+
+.radio {
+  visibility: hidden;
+  display: none;
+}
+.label {
+  display: block;
+  overflow: hidden;
+  border-top: 0.1rem solid rgb(210,217,226);
+}
+
+.drop {
+  height: 100%;
+  color: rgb(30,92,209);
+  display: flex;
+  flex-direction: column;
+}
+
+.drop__title {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  display: flex;
+}
+.drop__title span {
+  margin-left: auto;
+  transition: all 0.3s;
+  visibility: hidden;
+}
+
+.drop__pic {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+.drop__img {
+  transition: width 0.7s;
+  width: 0%;
+}
+.label:active {
+  opacity: 0.7;
+}
+.label:active .drop__title{
+  color: blue;
+}
+.radio:checked ~ .drop {
+  color: black;
+}
+.radio:checked ~ .drop .drop__title span {
+  transform: rotate(45deg);
+}
+.radio:checked ~ .drop .drop__img {
+  width: 50%;
+}
+@media (hover: hover) {
+  .accordion:hover .drop {
+    color: black;
+  }
+  .accordion:hover .drop__title span {
+    visibility: visible;
+  }
+  .label:hover {
+    cursor: pointer;
+  }
+  .drop:hover .drop__img {
+    width: 50%;
+  }
+  .drop:hover .drop__title span {
+    transform: rotate(45deg);
+  }
+}
+/* --------------------------------- */
+@media screen and (max-width: 1680px) {
+  :root {
+    --screen: var(--lg);
+  }
+  html,body {
+    font-size: 95%;
+  }
+}
+@media screen and (max-width: 1420px) {
+  :root {
+    --screen: var(--md);
+  }
+  html,body {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 819px) {
+  :root {
+    --screen: var(--sm);
+  }
+  html,body {
+    font-size: 80%;
+  }
+}
+.section {
+  padding: 0 calc(50% - var(--screen)/2);
+}
