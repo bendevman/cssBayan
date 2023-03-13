@@ -28,12 +28,7 @@ html,body {
   padding: 0;
 	margin: 0;
 }
-.accordion:hover .drop {
-  color: black;
-}
-.accordion:hover .drop__title span {
-  visibility: visible;
-}
+
 .radio {
   visibility: hidden;
   display: none;
@@ -43,18 +38,14 @@ html,body {
   overflow: hidden;
   border-top: 1px solid rgb(210,217,226);
 }
-.label:hover {
-  cursor: pointer;
-}
+
 .drop {
   height: 100%;
   color: rgb(30,92,209);
   display: flex;
   flex-direction: column;
 }
-.drop:hover .drop__img {
-  width: 50%;
-}
+
 .drop__title {
   font-size: 1.5rem;
   padding: 10px 0;
@@ -66,9 +57,7 @@ html,body {
   transition: all 0.3s;
   visibility: hidden;
 }
-.drop:hover .drop__title span {
-  transform: rotate(45deg);
-}
+
 .drop__pic {
   display: flex;
   justify-content: center;
@@ -93,7 +82,23 @@ html,body {
 .radio:checked ~ .drop .drop__img {
   width: 50%;
 }
-
+@media (hover: hover) {
+  .accordion:hover .drop {
+    color: black;
+  }
+  .accordion:hover .drop__title span {
+    visibility: visible;
+  }
+  .label:hover {
+    cursor: pointer;
+  }
+  .drop:hover .drop__img {
+    width: 50%;
+  }
+  .drop:hover .drop__title span {
+    transform: rotate(45deg);
+  }
+}
 /* --------------------------------- */
 @media screen and (max-width: 1680px) {
   :root {
